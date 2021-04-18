@@ -140,19 +140,18 @@
                     </textarea><br /><br />
                     <input type='checkbox' required name='checkbox' value='check' id='agree' /> I agree to the Terms and Conditions.<br /><br />
                     <input class='btn btn-info' type='submit' name='submit' value='Upload'> <br /> <br />
-                    </form> </div>";
+                    </form> ";
 
                     $statusMsg = '';
 
                     // File upload path
                     $targetDir = "uploads/";
                     if(isset($_FILES["file"]))
-                    {
-                        $fileName = $_SESSION['name'].basename($_FILES["file"]["name"]);
-                        $targetFilePath = $targetDir .$studentname."_".$fileName;
-                        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-                    }
-
+                        {
+                            $fileName = $_SESSION['name']."_".basename($_FILES["file"]["name"]);
+                            $targetFilePath = $targetDir .$fileName;
+                            $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+                        }
 
 
                     if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
@@ -183,6 +182,7 @@
                     echo $statusMsg;
                 
                     ?>
-                    
+                    <br />
+                    <button class="btn btn-warning" onclick="window.location.href='../student/ewsd_studenthome.php'">Back to Student Homepage</button></div>
 </body>
 </html>

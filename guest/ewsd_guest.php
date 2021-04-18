@@ -7,27 +7,7 @@
     {
         header("Location: ../ewsd_login.php");
     }
-    date_default_timezone_set("Asia/Kuala_Lumpur");
-    $query = $db->query("SELECT * FROM submission where comments='false' or comments=NULL ORDER BY uploaded_on ASC");
-    if($query->num_rows > 0){
-        while($row = $query->fetch_assoc()){
-            $f = $row["faculty"];
-            $n = $row["studentname"];
-            $d = $row["description"];
-            $time = $row["uploaded_on"];
-            $dt2= date_create($time);
-            $interval = date_diff($dt1,$dt2);
-            $days = $interval->format('%d');
-            if($days >= 14)
-            {
-                sendEmail($f,$n,$d,$time);
-            }
-            else{
-                //echo "<script>alert(".$days.");</script>";
-            }
-        
-         }
-    }
+   
 ?>
 
 <!DOCTYPE html>

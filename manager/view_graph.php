@@ -232,9 +232,9 @@ function f3 () {
      
      </header> 
     <div class="containerBtn">
-    <button class="btn btn-primary" onclick="f1()">Show contributions graph</button>
-    <button class="btn btn-primary" onclick="f2()">Show contributors graph</button>
-    <button class="btn btn-primary" onclick="f3()">Show contributors graph</button>
+    <button class="btn btn-primary" onclick="f1()">Show number of contributions graph</button>
+    <button class="btn btn-primary" onclick="f2()">Show percentage of contributions graph</button>
+    <button class="btn btn-primary" onclick="f3()">Show number of contributors graph</button>
     <button class="btn btn-warning" onclick="window.location.href='ewsd_manager.php'">Back to manager homepage</button>
     </div>
     <div id="chartContainer" style="height: 300px; width: 100%;">
